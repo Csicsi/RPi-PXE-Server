@@ -138,7 +138,7 @@ bind-dynamic
 enable-tftp=${INTERFACE_ETH0:?}
 #tftp-lowercase
 tftp-root=${DST_TFTP_ETH0:?}/, ${INTERFACE_ETH0:?}
-dhcp-option=tag:${INTERFACE_ETH0:?}, option:tftp-server, 0.0.0.0
+dhcp-option=tag:${INTERFACE_ETH0:?}, option:tftp-server, ${IP_ETH0:?}
 
 ##########
 # Time Server
@@ -158,12 +158,14 @@ dhcp-mac=set:block, 28:c6:8e:*:*:*
 #dhcp-host=set:known_129,  client_acb,        192.168.1.129,  [fd80::192.168.1.129],  infinite
 
 # dynamic IP
-dhcp-range=tag:${INTERFACE_ETH0:?},  tag:!block,  fd80::${IP_ETH0_START:?}, fd80::${IP_ETH0_END:?}, 120, 1h
-dhcp-range=tag:${INTERFACE_ETH0:?},  tag:!block,  ${IP_ETH0_START:?}, ${IP_ETH0_END:?}, 255.255.255.0, 1h
+# IPv6 DHCP disabled in proxy setup; RA will still flow if router provides it
+# dhcp-range (v6) intentionally omitted
+# Proxy DHCP for IPv4: advertise PXE options only; router keeps assigning IPs
+dhcp-range=tag:${INTERFACE_ETH0:?},tag:!block, ${IP_ETH0%.*}.0, proxy, 255.255.255.0, 1h
 
 ##########
 # DNS (enabled)
-port=53
+port=0
 #log-queries
 dns-loop-detect
 stop-dns-rebind
