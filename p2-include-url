@@ -36,8 +36,8 @@ fi
 #                      https://cdimage.ubuntu.com/ubuntustudio/dvd/pending/
 # lubuntu              https://cdimage.ubuntu.com/lubuntu/releases/
 #                      https://cdimage.ubuntu.com/lubuntu/daily-live/pending/
-# debian               https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
-#                      https://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/
+# debian               https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.1.0-amd64-netinst.iso
+#                      https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.1.0-amd64-netinst.iso
 # devuan               https://files.devuan.org/devuan_beowulf/desktop-live/
 # dragon os            https://sourceforge.net/projects/dragonos-focal/files/
 # finnix               https://linode-london.mirrors.finnix.org/pub/mirrors/finnix/releases/current/
