@@ -32,3 +32,9 @@ fi
 #
 # Ensure your CUSTOM_ENTRY name is unique
 # and the same name as in c2-custom-handle and c2-custom-menu
+
+
+# Rocky Linux (example entry added by assistant)
+ROCKY_X64=rocky-x64
+ROCKY_X64_URL=https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.0-x86_64-minimal.iso
+ROCKY_X64_SUM_TYPE=sha256

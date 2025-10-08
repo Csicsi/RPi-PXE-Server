@@ -33,3 +33,16 @@ fi
 # EOF
 # fi
 #=========== END Example===========
+
+#========== BEGIN rocky-x64 ==========
+if [[ -f "$FILE_MENU" ]] \
+&& [[ -f "$DST_ISO/rocky-x64.iso" ]]; then
+   echo  -e "\e[36m    add rocky-x64\e[0m";
+   cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
+   LABEL rocky-x64
+       MENU LABEL Rocky Linux 9 (x86_64)
+       KERNEL $FILE_BASE$NFS_ETH0/rocky-x64/vmlinuz
+       APPEND initrd=$FILE_BASE$NFS_ETH0/rocky-x64/initrd.img boot=live
+EOF
+fi
+#=========== END rocky-x64===========

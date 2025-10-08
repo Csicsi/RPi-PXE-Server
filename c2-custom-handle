@@ -62,3 +62,4 @@ fi
 ##exec       |act.|type |VAR. name of item       |optional options
 #handle_item  '+'  iso   CUSTOM_ENTRY1            timestamping  ,custom_fstab_options;
 #handle_item  '+'  iso   CUSTOM_ENTRY2            ,custom_fstab_options  vbladed 1 1;
+handle_item  '+'  iso   ROCKY_X64;
